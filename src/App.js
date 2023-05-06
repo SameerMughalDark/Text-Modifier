@@ -1,16 +1,16 @@
 import './App.css';
 import Navbar from './components/Navbar'
 import TextArea from './components/TextArea';
-import Button from './components/Button';
+import AboutDeveloper from './components/AboutDeveloper';
+
+
 
 function App() {
   return (
     <>
     <Navbar title='Darks Text Modifier Application'/>
-    <TextArea heading='Enter Your Text:'/>
-    <div className="container">
-    <Button buttonName='To Uppercase'/>
-    </div>
+    <TextArea heading='Enter Your Text:' />
+   <AboutDeveloper developerName='Sameer Abbas Mughal'/>
     </>
    
   );
