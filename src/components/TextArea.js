@@ -40,10 +40,10 @@ export default function TextArea(props) {
   
 
   return (
-    <div className='container my-3'>
-      <h1>{props.heading}</h1>
+    <div className='container my-3' >
+      <h1  style={props.themeColor==='dark'?{color:'white'}:{color:'black'}}>{props.heading}</h1>
       <div className="form-floating">
-        <textarea className="form-control" placeholder="Drop Your Selected Text Here:" style={{ height: '200px' }} value={text} onChange={handleChange}>{setText}</textarea>
+        <textarea className="form-control" placeholder="Drop Your Selected Text Here:"  style={props.themeColor==='dark'?{backgroundColor:'#182028',color:'white',height: "100px"}:{color:'black',backgroundColor:'white',height: "100px"}} value={text} onChange={handleChange}>{setText}</textarea>
       </div>
       <button className="btn btn-primary mx-2 my-3" onClick={toUpperCase}>toUpperCase</button>
       <button className="btn btn-primary mx-2 my-3" onClick={toLowerCases}>toLowerCase</button>
