@@ -8,7 +8,7 @@ function AboutDeveloper(props) {
 
     }
     return (
-        <div className="container" style={props.themeColor==='dark'?{backgroundColor:'#182028',color:'white'}:{color:'black',backgroundColor:'white'}} >
+        <div className="container my-3" style={props.themeColor==='dark'?{backgroundColor:'#182028',color:'white'}:{color:'black',backgroundColor:'white'}} >
             <h1 >About-Us</h1>
             <div className="card" style={props.themeColor==='dark'?{backgroundColor:'#182028',color:'white'}:{color:'black',backgroundColor:'white'}} >
                 <img src={developerPictureLink} onClick={openInNewTab} className="card-img-top" alt="Developer " style={{ width: '200px', cursor: 'pointer' }} />

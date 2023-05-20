@@ -38,8 +38,8 @@ export default function TextArea(props) {
 
   }
   
-
   return (
+    <>
     <div className='container my-3' >
       <h1  style={props.themeColor==='dark'?{color:'white'}:{color:'black'}}>{props.heading}</h1>
       <div className="form-floating">
@@ -48,7 +48,13 @@ export default function TextArea(props) {
       <button className="btn btn-primary mx-2 my-3" onClick={toUpperCase}>toUpperCase</button>
       <button className="btn btn-primary mx-2 my-3" onClick={toLowerCases}>toLowerCase</button>
       <button className="btn btn-primary mx-2 my-3" onClick={removeExtraSpaces}>Remove Extra Spaces</button>
-
     </div>
+     <div className='container'style={props.themeColor==='dark'?{backgroundColor:'#182028',color:'white'}:{color:'black',backgroundColor:'white'}} >
+      
+     <span>Words: <b>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length }</b> <br/>Characters: <b>{text.length}</b> </span>
+     <h1>Text Preview</h1>
+     <p>{text==='Enter Your Text Here:'?'':text}</p>
+   </div>
+   </>
   )
 }
